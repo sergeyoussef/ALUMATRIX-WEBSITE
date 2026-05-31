@@ -10278,3 +10278,28 @@ html[dir="rtl"] .hero h1,
 html[dir="rtl"] .hero-content h1 {
   line-height: 1.25 !important;
 }
+/* Browser fix: stop supplier title from hiding under header */
+.hero {
+  padding-top: 140px !important;
+}
+
+.supplier-sidebar,
+.approved-suppliers,
+.suppliers-strip,
+.hero-suppliers {
+  top: 150px !important;
+}
+
+/* For shorter / zoomed browser windows */
+@media (max-height: 800px) {
+  .hero {
+    padding-top: 155px !important;
+  }
+
+  .supplier-sidebar,
+  .approved-suppliers,
+  .suppliers-strip,
+  .hero-suppliers {
+    top: 165px !important;
+  }
+}
