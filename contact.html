@@ -125,7 +125,7 @@
           </div>
         </div>
 
-<form action="https://formbold.com/s/9XlME" method="POST" enctype="multipart/form-data">
+<form action="http://formbold.com/s/9XlME" method="POST" enctype="multipart/form-data">
   <input type="text" name="name" placeholder="Full Name" required>
   <input type="email" name="email" placeholder="Email Address" required>
   <input type="tel" name="phone" placeholder="Phone Number">
@@ -133,8 +133,12 @@
 
   <label class="file-upload-label">
     Attach photo or file
-    <input type="file" name="attachment" accept="image/*,.pdf" multiple>
-  </label>
+<input 
+  type="file" 
+  name="attachment" 
+  accept="image/*,video/*,.pdf,.doc,.docx" 
+  multiple
+>  </label>
 
   <button class="btn btn-primary" type="submit">Send Inquiry</button>
 </form>
