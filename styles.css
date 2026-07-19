@@ -10280,3 +10280,228 @@ html[dir="rtl"] .hero-content h1 {
 }
 
 
+
+/* Featured projects page */
+.projects-page .projects-hero {
+  background-position: center 46%;
+}
+
+.featured-projects-section {
+  background: #f7f8fa;
+}
+
+.projects-intro {
+  margin-bottom: 58px;
+}
+
+.featured-projects-list {
+  display: grid;
+  gap: 72px;
+}
+
+.featured-project {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(340px, 0.88fr);
+  min-height: 560px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e1e5eb;
+  box-shadow: 0 24px 70px rgba(14, 30, 58, 0.11);
+}
+
+.featured-project-reverse {
+  grid-template-columns: minmax(340px, 0.88fr) minmax(0, 1.12fr);
+}
+
+.featured-project-reverse .featured-project-image {
+  order: 2;
+}
+
+.featured-project-reverse .featured-project-content {
+  order: 1;
+}
+
+.featured-project-image {
+  min-height: 560px;
+  overflow: hidden;
+  background: #e8ebef;
+}
+
+.featured-project-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.65s ease;
+}
+
+.featured-project:hover .featured-project-image img {
+  transform: scale(1.025);
+}
+
+.featured-project-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 58px 54px;
+}
+
+.project-number {
+  position: absolute;
+  top: 24px;
+  right: 30px;
+  color: rgba(14, 48, 110, 0.09);
+  font-size: clamp(4.5rem, 8vw, 7.5rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+body.rtl .project-number {
+  right: auto;
+  left: 30px;
+}
+
+.project-eyebrow {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 12px;
+  color: #0e3478;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+body.rtl .project-eyebrow {
+  letter-spacing: 0;
+  font-size: 0.95rem;
+}
+
+.featured-project-content h2 {
+  position: relative;
+  z-index: 1;
+  color: #0c2f6c;
+  font-size: clamp(2rem, 3.4vw, 3.45rem);
+  line-height: 1.06;
+  text-transform: uppercase;
+}
+
+body.rtl .featured-project-content h2 {
+  line-height: 1.25;
+  text-transform: none;
+}
+
+.project-description {
+  position: relative;
+  z-index: 1;
+  margin-top: 22px;
+  color: #515d6d;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.project-facts {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0;
+  margin-top: 30px;
+  border-top: 1px solid #d9dfe7;
+}
+
+.project-facts > div {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 18px;
+  padding: 17px 0;
+  border-bottom: 1px solid #d9dfe7;
+}
+
+.project-facts dt {
+  color: #0e3478;
+  font-weight: 900;
+}
+
+.project-facts dd {
+  margin: 0;
+  color: #252c35;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+body.rtl .project-facts > div {
+  grid-template-columns: 125px 1fr;
+}
+
+@media (max-width: 900px) {
+  .featured-project,
+  .featured-project-reverse {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .featured-project-image,
+  .featured-project-reverse .featured-project-image {
+    order: 1;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .featured-project-content,
+  .featured-project-reverse .featured-project-content {
+    order: 2;
+    padding: 46px 38px;
+  }
+}
+
+@media (max-width: 560px) {
+  .featured-projects-section {
+    padding-top: 62px;
+  }
+
+  .projects-intro {
+    margin-bottom: 38px;
+  }
+
+  .featured-projects-list {
+    gap: 38px;
+  }
+
+  .featured-project-image,
+  .featured-project-reverse .featured-project-image {
+    aspect-ratio: 1 / 0.88;
+  }
+
+  .featured-project-content,
+  .featured-project-reverse .featured-project-content {
+    padding: 38px 24px 30px;
+  }
+
+  .project-number {
+    top: 17px;
+    right: 20px;
+    font-size: 4.8rem;
+  }
+
+  body.rtl .project-number {
+    right: auto;
+    left: 20px;
+  }
+
+  .project-description {
+    margin-top: 17px;
+    font-size: 0.95rem;
+  }
+
+  .project-facts {
+    margin-top: 24px;
+  }
+
+  .project-facts > div,
+  body.rtl .project-facts > div {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 14px 0;
+  }
+}
